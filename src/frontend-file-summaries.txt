@@ -9,5 +9,5 @@
   "frontend/src/components/Footer.tsx": "Footer component with company info, logo, quick contact details, services list, and attribution link to caffeine.ai with proper UTM tracking.",
   "frontend/src/index.css": "Global styles defining an amber/orange emergency theme using OKLCH color system for both light and dark modes, custom section utilities, and typography settings.",
   "frontend/tailwind.config.js": "Tailwind configuration extending the theme with custom amber/orange color palette, font families, border radius values, shadows including glow effects, and custom animations for the towing service brand.",
-  "frontend/src/components/PhotosSection.tsx": "Photos section component displaying two uploaded images (company logo and tow truck in action) in a responsive 1-column (mobile) / 2-column (desktop) grid with hover effects and proper alt text."
+  "frontend/src/components/PhotosSection.tsx": "Photos section component displaying three uploaded images (two company logos and one tow truck in action) in a responsive 1-column (mobile) / 2-column (desktop) grid with hover effects and proper alt text."
 }

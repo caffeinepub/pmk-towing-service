@@ -1,53 +1,27 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "PMK Towing Service - Add photos section to Draft Version 2",
+  "title": "Add new uploaded photo to Photos gallery (PMK TOWING SERVICE)",
   "requirements": [
     {
-      "id": "REQ-6",
-      "summary": "Add the two uploaded images as public static assets and display them in a new labeled Photos section on the single-page homepage.",
+      "id": "REQ-8",
+      "summary": "Add Photo_1770974399544.png as a static upload asset and include it in the existing Photos gallery list with appropriate alt text.",
       "acceptanceCriteria": [
-        "Both uploaded files are included in the repo under a public static path (e.g., frontend/public/assets/...) and can be loaded directly by the browser.",
-        "A new homepage section (e.g., \"Photos\" or \"Gallery\") displays both images in a responsive layout (1 column on mobile, 2 columns on tablet/desktop).",
-        "Each image includes English alt text appropriate to the photo content.",
-        "Images are styled to match the existing site theme (spacing, borders/radius, shadows) and do not break the existing layout."
+        "The file Photo_1770974399544.png is available as a static asset under the existing uploads path and is reachable via a /assets/uploads/... URL like the other photos.",
+        "The Photos section (frontend/src/components/PhotosSection.tsx) includes a new entry for /assets/uploads/Photo_1770974399544.png in its photos list.",
+        "The new image renders correctly on the homepage in the Photos grid on both mobile (1 column) and desktop (2 columns), without breaking the layout.",
+        "The rendered <img> for the new photo includes a clear, English alt text describing the image (towing logo/branding and contact number)."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/uploads/Photo_1770974079038.png",
+          "path": "frontend/public/assets/uploads/Photo_1770974399544.png",
           "operation": "create",
-          "description": "Add the uploaded PNG to a public static assets path so it can be loaded directly by the browser."
-        },
-        {
-          "path": "frontend/public/assets/uploads/IMG_20260204_215933_110.jpg",
-          "operation": "create",
-          "description": "Add the uploaded JPG to a public static assets path so it can be loaded directly by the browser."
+          "description": "Add the provided image file to the existing static uploads directory so it is served alongside the other gallery images and is reachable at /assets/uploads/Photo_1770974399544.png."
         },
         {
           "path": "frontend/src/components/PhotosSection.tsx",
-          "operation": "create",
-          "description": "Create a new Photos section component (single-page section with id=\"photos\") that renders both static images from frontend/public/assets/uploads in a responsive 1-column (mobile) / 2-column (md+) grid; include English alt text for each image; match existing theme spacing, border radius, and shadow styling. Use shadcn/ui Card for consistent styling if appropriate. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/App.tsx",
           "operation": "modify",
-          "description": "Wire the new PhotosSection into the existing single-page layout (no new routes), placing it as a new clearly labeled section on the Draft Version 2 homepage without disrupting existing sections or the +917842969695 phone behavior."
-        }
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "summary": "Add a header navigation link that smooth-scrolls to the new Photos section and works in both desktop and mobile menus.",
-      "acceptanceCriteria": [
-        "Header navigation includes a new link label in English (e.g., \"Photos\") that scrolls smoothly to the new photos section.",
-        "Mobile menu includes the same new navigation item and closes after selection, consistent with existing behavior.",
-        "All pre-existing navigation links (Home, Services, Service Area, Contact) still work as before."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/components/HeaderNav.tsx",
-          "operation": "modify",
-          "description": "Add a new navLinks item (label \"Photos\", id \"photos\") to the existing header navigation so it uses the existing scrollToSection smooth-scroll behavior; ensure the mobile menu includes the same item and continues to close after selection; keep all existing navigation items and click-to-call behavior intact."
+          "description": "Append a new photo object to the existing `photos` array with `src` set to /assets/uploads/Photo_1770974399544.png and an English `alt` text describing the PMK Towing branding/logo and contact number; keep the existing responsive grid behavior unchanged."
         }
       ]
     }

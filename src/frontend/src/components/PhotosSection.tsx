@@ -9,6 +9,10 @@ export function PhotosSection() {
     {
       src: '/assets/uploads/IMG_20260204_215933_110.jpg',
       alt: 'PMK Towing recovery vehicle with tow truck transporting a damaged car at service location'
+    },
+    {
+      src: '/assets/uploads/Photo_1770974399544.png',
+      alt: 'PMK Towing Service branding with tow truck silhouette, 24/7 emergency recovery service, and contact number 7842969695'
     }
   ];
 
