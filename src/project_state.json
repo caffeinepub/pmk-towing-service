@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a website for PMK TOWING SERVICE, a car towing/recovery service in Nellore, including contact phone +917842969695.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Simple bold logo mark with tow-truck silhouette and text “PMK TOWING SERVICE” (pmk-logo.dim_512x512.png)\n- Wide hero illustration/photo-style graphic of a car being safely towed on a road with a clean background (pmk-hero.dim_1600x900.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-marketing-website-for-pmk-towing-service-describing-a-car-towing-and-recovery-service-in-nellore-using-english-for-all-user-facing-text",
+      "title": "Create a responsive marketing website for “PMK TOWING SERVICE”, describing a car towing and recovery service in Nellore, using English for all user-facing text.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-prominent-contact-actions-using-the-provided-phone-number-917842969695-including-a-click-to-call-link-tel-and-at-least-one-persistent-call-to-action-button-visible-on-mobile",
+      "title": "Add prominent contact actions using the provided phone number +917842969695, including a click-to-call link (tel:) and at least one persistent call-to-action button visible on mobile.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-include-clearly-labeled-sections-appropriate-for-a-towing-recovery-service-website-hero-services-service-area-nellore-and-contact",
+      "title": "Include clearly labeled sections appropriate for a towing/recovery service website: Hero, Services, Service Area (Nellore), and Contact.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-visual-theme-suitable-for-an-emergency-roadside-towing-business-distinct-color-palette-typography-spacing-and-component-styling-and-enforce-it-consistently-across-all-sections-avoid-a-blue-purple-dominant-palette",
+      "title": "Apply a cohesive visual theme suitable for an emergency roadside/towing business (distinct color palette, typography, spacing, and component styling) and enforce it consistently across all sections (avoid a blue/purple-dominant palette).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-image-assets-to-support-the-website-logo-and-hero-visual-store-them-under-frontend-public-assets-generated-and-render-them-in-the-ui",
+      "title": "Add generated static image assets to support the website (logo and hero visual), store them under frontend/public/assets/generated, and render them in the UI.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a website for PMK TOWING SERVICE (car towing/recovery in Nellore) including contact phone +917842969695.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "PMK TOWING SERVICE",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

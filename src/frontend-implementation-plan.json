@@ -1,0 +1,141 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "PMK Towing Service — Single-page marketing site",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a responsive single-page marketing site with clear PMK TOWING SERVICE branding and English-only copy.",
+      "acceptanceCriteria": [
+        "The site loads as a complete, coherent website with clear branding for “PMK TOWING SERVICE”.",
+        "All visible text is in English.",
+        "Layout is responsive and usable on mobile and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page layout shell (header + main + footer) and render the full marketing page content in English with responsive structure. Use shadcn-ui components (e.g., Button/Card/Separator) to compose UI without modifying any files under frontend/src/components/ui. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/PmkLayout.tsx",
+          "operation": "create",
+          "description": "Add a reusable layout component for consistent spacing, section containers, and responsive header/footer structure used by App. Use shadcn-ui components where helpful (composition only). Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add prominent click-to-call contact actions using +917842969695 with a mobile-visible persistent CTA.",
+      "acceptanceCriteria": [
+        "The phone number is displayed exactly as “+917842969695”.",
+        "At least one button/link uses a tel:+917842969695 href and works in the browser.",
+        "A call-to-action is visible without scrolling on a typical mobile viewport (e.g., in the hero section or a sticky footer)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/CallToActionBar.tsx",
+          "operation": "create",
+          "description": "Create a persistent mobile CTA (e.g., sticky bottom bar) with a primary click-to-call button linking to tel:+917842969695 and showing the number exactly as “+917842969695”. Use shadcn-ui Button for consistent styling (composition only). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ContactSection.tsx",
+          "operation": "create",
+          "description": "Create a Contact section containing the phone number displayed exactly as “+917842969695” plus at least one tel:+917842969695 link/button and supporting contact text in English. Use shadcn-ui components (Button/Card) as needed (composition only). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the CallToActionBar into the page so it is visible on mobile without scrolling (and ensure at least one click-to-call action appears in the hero area as well). Use composition with shadcn-ui where applicable. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Implement clearly labeled Hero, Services, Service Area (Nellore), and Contact sections with fast navigation/structure.",
+      "acceptanceCriteria": [
+        "Navigation or clear page structure allows users to find Services, Service Area (Nellore), and Contact information quickly.",
+        "Services section lists towing/recovery offerings in plain English (no placeholder lorem ipsum).",
+        "Service Area explicitly mentions Nellore."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create the Hero section with clear PMK TOWING SERVICE branding, a short English value proposition for towing/recovery in Nellore, and prominent in-hero call-to-call action. Use shadcn-ui Button for the hero CTA (composition only). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ServicesSection.tsx",
+          "operation": "create",
+          "description": "Create a Services section listing plain-English towing/recovery offerings (e.g., emergency towing, breakdown recovery, flatbed towing, accident recovery, outstation assistance as applicable) with clear labels. Use shadcn-ui Card/Separator for consistent presentation (composition only). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/ServiceAreaSection.tsx",
+          "operation": "create",
+          "description": "Create a Service Area section explicitly mentioning Nellore and describing coverage in clear English (no external maps). Use shadcn-ui components for section styling if helpful (composition only). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/HeaderNav.tsx",
+          "operation": "create",
+          "description": "Create a header navigation that links to on-page section anchors (Hero, Services, Service Area (Nellore), Contact) for quick access. Use shadcn-ui components for buttons/menus if used (composition only). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire Hero, Services, Service Area (Nellore), and Contact sections into a single-page flow with stable anchor IDs and include HeaderNav for quick navigation. Use composition with shadcn-ui where applicable. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply a consistent emergency roadside/towing theme (non blue/purple-dominant) across typography, colors, spacing, and components.",
+      "acceptanceCriteria": [
+        "The site uses a consistent theme (colors, typography, buttons, section styling) across all sections.",
+        "Primary theme is not dominated by blue/purple."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Define a cohesive theme using CSS variables/Tailwind base layers with a towing/emergency palette (e.g., amber/orange + dark neutrals), consistent typography, and section spacing. Ensure the primary styling is not blue/purple-dominant. Keep styling consistent with shadcn-ui variable-driven theming (compose; do not modify frontend/src/components/ui). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/PmkLayout.tsx",
+          "operation": "modify",
+          "description": "Apply consistent layout spacing, section backgrounds, and typography classes so all sections share the same theme and visual rhythm across mobile/desktop. Use composition with shadcn-ui components where applicable. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add generated static logo and hero images under frontend/public/assets/generated and render them in the UI.",
+      "acceptanceCriteria": [
+        "The generated images exist under frontend/public/assets/generated with the specified filenames.",
+        "The logo appears in the header/hero area and the hero image/illustration appears in the hero section.",
+        "Images are loaded as static assets (not served from the backend)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/pmk-logo.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated static logo asset at frontend/public/assets/generated/pmk-logo.dim_512x512.png."
+        },
+        {
+          "path": "frontend/public/assets/generated/pmk-hero.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated static hero visual asset at frontend/public/assets/generated/pmk-hero.dim_1600x900.png."
+        },
+        {
+          "path": "frontend/src/components/HeaderNav.tsx",
+          "operation": "modify",
+          "description": "Render the logo image from frontend/public/assets/generated/pmk-logo.dim_512x512.png in the header area with accessible alt text and responsive sizing."
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Render the hero image from frontend/public/assets/generated/pmk-hero.dim_1600x900.png within the hero section (responsive, with appropriate alt text) and ensure it complements the CTA content."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-17T23:58:50.915Z",
+  "summary": "Implements a single-page marketing site structure with Hero/Services/Service Area/Contact sections, prominent tel: links, and an amber/orange towing theme. However, required generated image assets are not evidenced as added, and the “persistent mobile CTA visible without scrolling” acceptance criterion is not met by the implemented sticky bar behavior.",
+  "missing_requirements": [
+    {
+      "id": "REQ-2",
+      "requirement": "At least one persistent call-to-action button visible on mobile without scrolling (e.g., sticky footer/hero).",
+      "reason": "The implemented mobile bottom bar is hidden until the user scrolls >300px, so it is not visible without scrolling. While the Hero has a CTA, it is not persistent/sticky.",
+      "evidence": [
+        "frontend/src/components/CallToActionBar.tsx",
+        "frontend/src/components/HeroSection.tsx"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Add generated static image assets under frontend/public/assets/generated with filenames pmk-logo.dim_512x512.png and pmk-hero.dim_1600x900.png.",
+      "reason": "UI references these asset paths, but the diff summary does not show the image files being added under frontend/public/assets/generated (only code files are listed as added).",
+      "evidence": [
+        "frontend/src/components/HeaderNav.tsx",
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/components/Footer.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Added an empty backend canister actor (backend/main.mo) despite the request being solely for a frontend marketing site.",
+      "reason": "BuildRequest requirements are all frontend marketing-site requirements; no backend behavior is requested.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Introduced/added Internet Identity/actor hook infrastructure (useInternetIdentity/useActor) and wrapped the app with InternetIdentityProvider.",
+      "reason": "BuildRequest explicitly lists “User accounts or authentication (Internet Identity)” as a non-goal.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/hooks/useInternetIdentity.ts"
+      ]
+    },
+    {
+      "description": "Footer includes an attribution link to caffeine.ai with UTM tracking.",
+      "reason": "No requirement mentions attribution or external links/UTM tracking.",
+      "evidence": [
+        "frontend/src/components/Footer.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/CallToActionBar.tsx",
+    "frontend/src/components/ContactSection.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/HeaderNav.tsx",
+    "frontend/src/components/HeroSection.tsx",
+    "frontend/src/components/ServiceAreaSection.tsx",
+    "frontend/src/components/ServicesSection.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

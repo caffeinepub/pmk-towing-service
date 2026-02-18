@@ -1,0 +1,108 @@
+{
+  "kind": "build_request",
+  "title": "Single-page marketing website for PMK TOWING SERVICE (Nellore)",
+  "projectName": "PMK Towing Service",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive marketing website for “PMK TOWING SERVICE”, describing a car towing and recovery service in Nellore, using English for all user-facing text.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Create website for PMK TOWING SERVICE \nFor car towing recovery service in Nellore"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The site loads as a complete, coherent website with clear branding for “PMK TOWING SERVICE”.",
+        "All visible text is in English.",
+        "Layout is responsive and usable on mobile and desktop."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add prominent contact actions using the provided phone number +917842969695, including a click-to-call link (tel:) and at least one persistent call-to-action button visible on mobile.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Phone no +917842969695"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The phone number is displayed exactly as “+917842969695”.",
+        "At least one button/link uses a tel:+917842969695 href and works in the browser.",
+        "A call-to-action is visible without scrolling on a typical mobile viewport (e.g., in the hero section or a sticky footer)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Include clearly labeled sections appropriate for a towing/recovery service website: Hero, Services, Service Area (Nellore), and Contact.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "For car towing recovery service in Nellore"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Navigation or clear page structure allows users to find Services, Service Area (Nellore), and Contact information quickly.",
+        "Services section lists towing/recovery offerings in plain English (no placeholder lorem ipsum).",
+        "Service Area explicitly mentions Nellore."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Apply a cohesive visual theme suitable for an emergency roadside/towing business (distinct color palette, typography, spacing, and component styling) and enforce it consistently across all sections (avoid a blue/purple-dominant palette).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The site uses a consistent theme (colors, typography, buttons, section styling) across all sections.",
+        "Primary theme is not dominated by blue/purple."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add generated static image assets to support the website (logo and hero visual), store them under frontend/public/assets/generated, and render them in the UI.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The generated images exist under frontend/public/assets/generated with the specified filenames.",
+        "The logo appears in the header/hero area and the hero image/illustration appears in the hero section.",
+        "Images are loaded as static assets (not served from the backend)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/components/ui (compose them instead).",
+    "Do not modify immutable hook/bootstrap files: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx."
+  ],
+  "nonGoals": [
+    "Online payments or booking workflow.",
+    "User accounts or authentication (Internet Identity).",
+    "Real-time chat or messaging.",
+    "Integration with external maps/location services."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Simple bold logo mark with tow-truck silhouette and text “PMK TOWING SERVICE” (pmk-logo.dim_512x512.png)",
+      "Wide hero illustration/photo-style graphic of a car being safely towed on a road with a clean background (pmk-hero.dim_1600x900.png)"
+    ],
+    "edits": []
+  }
+}
