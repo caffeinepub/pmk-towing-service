@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-18T08:05:59.104Z",
+  "generatedAt": "2026-02-18T11:04:43.843Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,15 +11,28 @@
     "implemented": 1,
     "items": [
       {
-        "id": "REQ-8",
-        "summary": "Add the newly uploaded image file (Photo_1770974399544.png) to the frontend as a static asset and display it in the existing \"Photos\" gallery section alongside the current photos.",
+        "id": "REQ-1",
+        "summary": "Update the site-wide text color palette so all body text, headings, muted/secondary text, and link text use the new colors consistently across all sections (Header, Hero, Services, Service Area, Photos, Contact, Footer, and the mobile Call To Action bar). Prefer adjusting the theme tokens (CSS variables used by Tailwind) so most components update automatically, and only change component-level classes where text colors are hard-coded.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/uploads/Photo_1770974399544.png",
-          "frontend/src/components/PhotosSection.tsx"
+          "frontend/src/index.css",
+          "frontend/src/components/HeaderNav.tsx",
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/ServicesSection.tsx",
+          "frontend/src/components/ServiceAreaSection.tsx",
+          "frontend/src/components/PhotosSection.tsx",
+          "frontend/src/components/ContactSection.tsx",
+          "frontend/src/components/Footer.tsx",
+          "frontend/src/components/CallToActionBar.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/PhotosSection.tsx"
+          "frontend/src/index.css",
+          "frontend/src/components/HeroSection.tsx",
+          "frontend/src/components/ServicesSection.tsx",
+          "frontend/src/components/ServiceAreaSection.tsx",
+          "frontend/src/components/PhotosSection.tsx",
+          "frontend/src/components/ContactSection.tsx",
+          "frontend/src/components/Footer.tsx"
         ]
       }
     ]
@@ -29,7 +42,13 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
+    "frontend/src/components/ContactSection.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/HeroSection.tsx",
     "frontend/src/components/PhotosSection.tsx",
+    "frontend/src/components/ServiceAreaSection.tsx",
+    "frontend/src/components/ServicesSection.tsx",
+    "frontend/src/index.css",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

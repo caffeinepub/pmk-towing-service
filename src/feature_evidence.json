@@ -2,10 +2,16 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-add-the-newly-uploaded-image-file-photo-1770974399544-png-to-the-frontend-as-a-static-asset-and-display-it-in-the-existing-photos-gallery-section-alongside-the-current-photos",
-      "featureTitle": "Add the newly uploaded image file (Photo_1770974399544.png) to the frontend as a static asset and display it in the existing \"Photos\" gallery section alongside the current photos.",
+      "featureId": "feature-update-the-site-wide-text-color-palette-so-all-body-text-headings-muted-secondary-text-and-link-text-use-the-new-colors-consistently-across-all-sections-header-hero-services-service-area-photos-contact-footer-and-the-mobile-call-to-action-bar-prefer-adjusting-the-theme-tokens-css-variables-used-by-tailwind-so-most-components-update-automatically-and-only-change-component-level-classes-where-text-colors-are-hard-coded",
+      "featureTitle": "Update the site-wide text color palette so all body text, headings, muted/secondary text, and link text use the new colors consistently across all sections (Header, Hero, Services, Service Area, Photos, Contact, Footer, and the mobile Call To Action bar). Prefer adjusting the theme tokens (CSS variables used by Tailwind) so most components update automatically, and only change component-level classes where text colors are hard-coded.",
       "files": [
-        "frontend/src/components/PhotosSection.tsx"
+        "frontend/src/components/ContactSection.tsx",
+        "frontend/src/components/Footer.tsx",
+        "frontend/src/components/HeroSection.tsx",
+        "frontend/src/components/PhotosSection.tsx",
+        "frontend/src/components/ServiceAreaSection.tsx",
+        "frontend/src/components/ServicesSection.tsx",
+        "frontend/src/index.css"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -15,7 +21,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-8"
+        "REQ-1"
       ],
       "confidence": "high"
     }

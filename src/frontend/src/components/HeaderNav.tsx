@@ -39,7 +39,9 @@ export function HeaderNav() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-md shadow-md' : 'bg-transparent'
+        isScrolled 
+          ? 'bg-background/98 backdrop-blur-xl shadow-lg border-b border-border' 
+          : 'bg-gradient-to-b from-background/80 to-transparent backdrop-blur-sm'
       }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -49,31 +51,34 @@ export function HeaderNav() {
             onClick={() => scrollToSection('hero')}
             className="flex items-center gap-3 group"
           >
-            <img
-              src="/assets/generated/pmk-logo.dim_512x512.png"
-              alt="PMK Towing Service Logo"
-              className="h-12 w-12 object-contain transition-transform group-hover:scale-105"
-            />
+            <div className="relative">
+              <img
+                src="/assets/generated/pmk-logo-text-contrast.dim_512x512.png"
+                alt="PMK Towing Service Logo"
+                className="h-14 w-14 object-contain transition-all duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
             <div className="hidden sm:block">
-              <div className="text-xl font-bold text-foreground leading-tight">
+              <div className="text-xl font-extrabold text-foreground leading-tight tracking-tight">
                 PMK TOWING SERVICE
               </div>
-              <div className="text-xs text-muted-foreground">24/7 Emergency Assistance</div>
+              <div className="text-xs font-semibold text-primary">24/7 Emergency Assistance</div>
             </div>
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+                className="px-4 py-2 text-sm font-semibold text-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-200"
               >
                 {link.label}
               </button>
             ))}
-            <Button asChild size="default" className="gap-2">
+            <Button asChild size="default" className="ml-2 gap-2 font-bold shadow-glow-blue">
               <a href="tel:+917842969695">
                 <Phone className="h-4 w-4" />
                 Call Now
@@ -84,7 +89,7 @@ export function HeaderNav() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="md:hidden p-2 text-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-200"
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -92,13 +97,13 @@ export function HeaderNav() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            <div className="flex flex-col gap-4">
+          <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-xl rounded-b-xl">
+            <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
                   onClick={() => scrollToSection(link.id)}
-                  className="text-left text-base font-medium text-foreground hover:text-primary transition-colors py-2"
+                  className="text-left px-4 py-3 text-base font-semibold text-foreground hover:text-primary hover:bg-primary/5 rounded-lg transition-all duration-200"
                 >
                   {link.label}
                 </button>

@@ -1,27 +1,62 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add new uploaded photo to Photos gallery (PMK TOWING SERVICE)",
+  "title": "PMK Towing Service — Site-wide text color palette update",
   "requirements": [
     {
-      "id": "REQ-8",
-      "summary": "Add Photo_1770974399544.png as a static upload asset and include it in the existing Photos gallery list with appropriate alt text.",
+      "id": "REQ-1",
+      "summary": "Update theme text color tokens and align any hard-coded text/link classes so all sections use the new palette consistently (including mobile CTA bar) while keeping content unchanged.",
       "acceptanceCriteria": [
-        "The file Photo_1770974399544.png is available as a static asset under the existing uploads path and is reachable via a /assets/uploads/... URL like the other photos.",
-        "The Photos section (frontend/src/components/PhotosSection.tsx) includes a new entry for /assets/uploads/Photo_1770974399544.png in its photos list.",
-        "The new image renders correctly on the homepage in the Photos grid on both mobile (1 column) and desktop (2 columns), without breaking the layout.",
-        "The rendered <img> for the new photo includes a clear, English alt text describing the image (towing logo/branding and contact number)."
+        "Changing the theme text colors is done primarily via CSS variables in frontend/src/index.css (e.g., foreground, muted-foreground, primary-foreground, secondary-foreground, etc.), so existing Tailwind semantic classes (text-foreground, text-muted-foreground, text-primary, text-secondary-foreground/XX) reflect the updated colors site-wide.",
+        "All text remains clearly readable against its background in the main page sections (including hero overlay text, cards, footer, and sticky mobile call bar).",
+        "No user-facing text content, phone numbers, or links are changed; this is a visual-only color update.",
+        "Dark mode tokens (if present/used) remain coherent and readable after the update."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/uploads/Photo_1770974399544.png",
-          "operation": "create",
-          "description": "Add the provided image file to the existing static uploads directory so it is served alongside the other gallery images and is reachable at /assets/uploads/Photo_1770974399544.png."
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update the light and dark theme CSS variables (e.g., --foreground, --muted-foreground, --primary-foreground, --secondary-foreground, and related semantic tokens) to the new text color palette so Tailwind semantic text classes update site-wide automatically; ensure contrast remains readable on all current section backgrounds and overlays."
+        },
+        {
+          "path": "frontend/src/components/HeaderNav.tsx",
+          "operation": "modify",
+          "description": "Audit header navigation text/link color classes for any hard-coded or non-semantic text colors and adjust to semantic Tailwind classes (e.g., text-foreground, text-muted-foreground, text-primary) as needed so the new palette applies consistently; do not change any labels, phone number, or links."
+        },
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Audit hero headline, paragraph, and CTA link/button text color classes (including gradient/overlay readability) and adjust only where colors are hard-coded so text remains readable and consistent with the updated theme tokens; do not change any displayed copy or hrefs."
+        },
+        {
+          "path": "frontend/src/components/ServicesSection.tsx",
+          "operation": "modify",
+          "description": "Audit services section headings, descriptions, and the phone link text colors; replace any hard-coded text colors with semantic Tailwind classes where needed to align with updated theme tokens while keeping all content unchanged."
+        },
+        {
+          "path": "frontend/src/components/ServiceAreaSection.tsx",
+          "operation": "modify",
+          "description": "Audit service area section text (titles, list items, and phone link) for hard-coded text/link colors and adjust to semantic Tailwind classes as needed for consistent application of the new palette."
         },
         {
           "path": "frontend/src/components/PhotosSection.tsx",
           "operation": "modify",
-          "description": "Append a new photo object to the existing `photos` array with `src` set to /assets/uploads/Photo_1770974399544.png and an English `alt` text describing the PMK Towing branding/logo and contact number; keep the existing responsive grid behavior unchanged."
+          "description": "Audit photos section heading/subtitle text classes for any hard-coded colors and align them with semantic Tailwind classes so they reflect the new theme tokens consistently."
+        },
+        {
+          "path": "frontend/src/components/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Audit contact section headings, supporting text, and phone number/link styling for hard-coded text colors; update to semantic Tailwind classes where needed to keep contrast/readability consistent with the new palette without changing any text or links."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Audit footer text (including secondary-foreground opacity variants and link colors) to ensure they remain readable and consistent after token updates; adjust only hard-coded text color classes to semantic equivalents where necessary while keeping all content/links intact."
+        },
+        {
+          "path": "frontend/src/components/CallToActionBar.tsx",
+          "operation": "modify",
+          "description": "Audit the mobile sticky call-to-action bar text/button color classes to ensure readability and consistent use of updated semantic tokens (primary/secondary foregrounds) after the palette change; do not alter phone number or CTA text."
         }
       ]
     }

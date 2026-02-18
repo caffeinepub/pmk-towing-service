@@ -1,5 +1,6 @@
 import { Truck, Wrench, AlertCircle, Navigation, Shield, Clock } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Phone } from 'lucide-react';
 
 export function ServicesSection() {
   const services = [
@@ -36,27 +37,35 @@ export function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="section-container bg-muted/30">
-      <div className="text-center mb-16">
-        <h2 className="section-title">Our Towing Services</h2>
-        <p className="section-subtitle mx-auto mt-4">
-          Comprehensive car towing and recovery solutions for all your roadside needs in Nellore
+    <section id="services" className="section-container bg-gradient-to-b from-background to-muted/40">
+      <div className="text-center mb-20">
+        <div className="inline-block mb-4">
+          <span className="text-sm font-bold text-primary uppercase tracking-wider bg-primary/10 px-4 py-2 rounded-full">
+            Our Services
+          </span>
+        </div>
+        <h2 className="section-title text-foreground">Professional Towing Solutions</h2>
+        <p className="section-subtitle mx-auto mt-6">
+          Comprehensive towing and recovery services for all your vehicle needs in Nellore
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {services.map((service, index) => {
           const Icon = service.icon;
           return (
-            <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-2">
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Icon className="h-6 w-6 text-primary" />
+            <Card 
+              key={index} 
+              className="border-2 border-border hover:border-primary/30 transition-all duration-300 hover:shadow-card-hover hover:scale-105 rounded-2xl overflow-hidden group"
+            >
+              <CardHeader className="pb-4">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center mb-6 group-hover:shadow-glow-blue transition-all duration-300">
+                  <Icon className="h-8 w-8 text-primary" />
                 </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
+                <CardTitle className="text-2xl font-extrabold text-foreground">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-base">
+                <CardDescription className="text-base leading-relaxed text-muted-foreground">
                   {service.description}
                 </CardDescription>
               </CardContent>
@@ -65,37 +74,20 @@ export function ServicesSection() {
         })}
       </div>
 
-      <div className="mt-12 text-center">
-        <p className="text-muted-foreground mb-6">
-          Need immediate assistance? Our team is ready to help you 24/7
+      {/* Call to Action */}
+      <div className="text-center bg-gradient-to-br from-primary/10 to-accent/5 rounded-2xl p-10 border-2 border-primary/20">
+        <h3 className="text-3xl font-extrabold mb-4 text-foreground">Need Immediate Assistance?</h3>
+        <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+          Our team is ready to help you 24/7. Call us now for fast and reliable towing service.
         </p>
         <a
           href="tel:+917842969695"
-          className="inline-flex items-center gap-2 text-lg font-semibold text-primary hover:underline"
+          className="inline-flex items-center gap-3 text-primary font-bold text-2xl hover:text-accent transition-colors"
         >
-          <Phone className="h-5 w-5" />
-          Call +917842969695 Now
+          <Phone className="h-6 w-6" />
+          +917842969695
         </a>
       </div>
     </section>
-  );
-}
-
-function Phone({ className }: { className?: string }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-    </svg>
   );
 }

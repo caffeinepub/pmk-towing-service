@@ -1,11 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Add the newly uploaded PMK Towing branding image to the existing Photos gallery on the homepage.
+**Goal:** Update the site-wide text color palette so all text styles (body, headings, muted/secondary, links) use the new colors consistently across the single-page site.
 
 **Planned changes:**
-- Add `Photo_1770974399544.png` to the existing frontend uploads/static assets path so it is reachable under `/assets/uploads/...`.
-- Update `frontend/src/components/PhotosSection.tsx` to include a new photo entry for `/assets/uploads/Photo_1770974399544.png`.
-- Provide clear English alt text for the new image describing the towing branding and contact number.
+- Update theme text color tokens (CSS variables used by Tailwind) in `frontend/src/index.css` so semantic Tailwind classes (e.g., `text-foreground`, `text-muted-foreground`, `text-primary`, `text-secondary-foreground`) reflect the new palette site-wide.
+- Audit all sections (Header, Hero, Services, Service Area, Photos, Contact, Footer, and the mobile Call To Action bar) to ensure text remains readable against backgrounds/overlays/cards, adjusting only component-level hard-coded text color classes when needed.
+- Ensure any dark mode tokens (if present/used) remain coherent and readable after the color updates, without changing any user-facing text content, phone numbers, or links.
 
-**User-visible outcome:** The homepage Photos section shows the newly added PMK Towing branding image alongside the existing gallery images on both mobile and desktop without layout issues.
+**User-visible outcome:** The website looks the same structurally, but text colors are updated consistently across all sections, with clear readability on all backgrounds (including hero overlay and the sticky mobile call bar).

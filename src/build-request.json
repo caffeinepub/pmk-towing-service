@@ -1,36 +1,37 @@
 {
   "kind": "build_request",
-  "title": "Add uploaded image to Photos section",
-  "projectName": "PMK TOWING SERVICE",
+  "title": "Update UI text colors across the site",
+  "projectName": "PMK Towing Service",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-8",
-      "text": "Add the newly uploaded image file (Photo_1770974399544.png) to the frontend as a static asset and display it in the existing \"Photos\" gallery section alongside the current photos.",
+      "id": "REQ-1",
+      "text": "Update the site-wide text color palette so all body text, headings, muted/secondary text, and link text use the new colors consistently across all sections (Header, Hero, Services, Service Area, Photos, Contact, Footer, and the mobile Call To Action bar). Prefer adjusting the theme tokens (CSS variables used by Tailwind) so most components update automatically, and only change component-level classes where text colors are hard-coded.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-4"
         ],
         "quotes": [
-          "Please Add this image"
+          "Please change text colours"
         ]
       },
       "acceptanceCriteria": [
-        "The file Photo_1770974399544.png is available as a static asset under the existing uploads path and is reachable via a /assets/uploads/... URL like the other photos.",
-        "The Photos section (frontend/src/components/PhotosSection.tsx) includes a new entry for /assets/uploads/Photo_1770974399544.png in its photos list.",
-        "The new image renders correctly on the homepage in the Photos grid on both mobile (1 column) and desktop (2 columns), without breaking the layout.",
-        "The rendered <img> for the new photo includes a clear, English alt text describing the image (towing logo/branding and contact number)."
+        "Changing the theme text colors is done primarily via CSS variables in frontend/src/index.css (e.g., foreground, muted-foreground, primary-foreground, secondary-foreground, etc.), so existing Tailwind semantic classes (text-foreground, text-muted-foreground, text-primary, text-secondary-foreground/XX) reflect the updated colors site-wide.",
+        "All text remains clearly readable against its background in the main page sections (including hero overlay text, cards, footer, and sticky mobile call bar).",
+        "No user-facing text content, phone numbers, or links are changed; this is a visual-only color update.",
+        "Dark mode tokens (if present/used) remain coherent and readable after the update."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend/src/components/ui (Shadcn components are read-only).",
-    "Do not modify any files listed in frontend.immutablePaths in SYSTEM_CONTEXT."
+    "Do not modify files under frontend/src/components/ui (compose them only).",
+    "Do not modify frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, or frontend/src/main.tsx (immutable paths).",
+    "Keep the existing single-page sections and all existing content/links intact (e.g., tel:+917842969695 and section anchors)."
   ],
   "nonGoals": [
-    "Do not change the site navigation structure or add new sections.",
-    "Do not introduce any backend (Motoko) changes; this request is frontend-only."
+    "Redesigning layout, spacing, typography scale, or adding/removing sections.",
+    "Changing or regenerating AI image assets (logo/hero/photos) as part of this request."
   ],
   "imageRequirements": {
     "required": [],

@@ -21,13 +21,13 @@ export function CallToActionBar() {
         isVisible ? 'translate-y-0' : 'translate-y-full'
       }`}
     >
-      <div className="bg-primary text-primary-foreground shadow-lg border-t-2 border-primary-foreground/20">
-        <div className="px-4 py-3">
+      <div className="bg-primary text-primary-foreground shadow-glow-blue border-t-4 border-accent">
+        <div className="px-4 py-4">
           <Button
             asChild
             size="lg"
             variant="secondary"
-            className="w-full gap-2 text-base font-bold"
+            className="w-full gap-3 text-base font-extrabold h-14 rounded-xl shadow-lg"
           >
             <a href="tel:+917842969695">
               <Phone className="h-5 w-5" />
