@@ -2,30 +2,11 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-create-a-responsive-marketing-website-for-pmk-towing-service-describing-a-car-towing-and-recovery-service-in-nellore-using-english-for-all-user-facing-text",
-      "featureTitle": "Create a responsive marketing website for “PMK TOWING SERVICE”, describing a car towing and recovery service in Nellore, using English for all user-facing text.",
-      "files": [
-        "frontend/src/App.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-prominent-contact-actions-using-the-provided-phone-number-917842969695-including-a-click-to-call-link-tel-and-at-least-one-persistent-call-to-action-button-visible-on-mobile",
-      "featureTitle": "Add prominent contact actions using the provided phone number +917842969695, including a click-to-call link (tel:) and at least one persistent call-to-action button visible on mobile.",
+      "featureId": "feature-add-the-two-user-uploaded-images-photo-1770974079038-png-and-img-20260204-215933-110-jpg-to-the-frontend-as-static-assets-and-render-them-on-the-draft-version-2-homepage-in-a-new-clearly-labeled-section",
+      "featureTitle": "Add the two user-uploaded images (Photo_1770974079038.png and IMG_20260204_215933_110.jpg) to the frontend as static assets and render them on the Draft Version 2 homepage in a new, clearly labeled section.",
       "files": [
         "frontend/src/App.tsx",
-        "frontend/src/components/CallToActionBar.tsx",
-        "frontend/src/components/ContactSection.tsx"
+        "frontend/src/components/PhotosSection.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -35,19 +16,15 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-2"
+        "REQ-6"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-include-clearly-labeled-sections-appropriate-for-a-towing-recovery-service-website-hero-services-service-area-nellore-and-contact",
-      "featureTitle": "Include clearly labeled sections appropriate for a towing/recovery service website: Hero, Services, Service Area (Nellore), and Contact.",
+      "featureId": "feature-add-navigation-access-to-the-new-photos-section-from-the-header-navigation-using-the-existing-smooth-scroll-behavior",
+      "featureTitle": "Add navigation access to the new photos section from the header navigation using the existing smooth-scroll behavior.",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/HeaderNav.tsx",
-        "frontend/src/components/HeroSection.tsx",
-        "frontend/src/components/ServiceAreaSection.tsx",
-        "frontend/src/components/ServicesSection.tsx"
+        "frontend/src/components/HeaderNav.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -57,44 +34,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-3"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-apply-a-cohesive-visual-theme-suitable-for-an-emergency-roadside-towing-business-distinct-color-palette-typography-spacing-and-component-styling-and-enforce-it-consistently-across-all-sections-avoid-a-blue-purple-dominant-palette",
-      "featureTitle": "Apply a cohesive visual theme suitable for an emergency roadside/towing business (distinct color palette, typography, spacing, and component styling) and enforce it consistently across all sections (avoid a blue/purple-dominant palette).",
-      "files": [
-        "frontend/src/index.css"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-4"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-generated-static-image-assets-to-support-the-website-logo-and-hero-visual-store-them-under-frontend-public-assets-generated-and-render-them-in-the-ui",
-      "featureTitle": "Add generated static image assets to support the website (logo and hero visual), store them under frontend/public/assets/generated, and render them in the UI.",
-      "files": [
-        "frontend/src/components/HeaderNav.tsx",
-        "frontend/src/components/HeroSection.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-5"
+        "REQ-7"
       ],
       "confidence": "high"
     }

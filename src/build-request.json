@@ -1,108 +1,69 @@
 {
   "kind": "build_request",
-  "title": "Single-page marketing website for PMK TOWING SERVICE (Nellore)",
+  "title": "Add uploaded photos to Draft Version 2",
   "projectName": "PMK Towing Service",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Create a responsive marketing website for “PMK TOWING SERVICE”, describing a car towing and recovery service in Nellore, using English for all user-facing text.",
+      "id": "REQ-6",
+      "text": "Add the two user-uploaded images (Photo_1770974079038.png and IMG_20260204_215933_110.jpg) to the frontend as static assets and render them on the Draft Version 2 homepage in a new, clearly labeled section.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-user-add-photos-v2"
         ],
         "quotes": [
-          "Create website for PMK TOWING SERVICE \nFor car towing recovery service in Nellore"
+          "Add photos on version 2"
         ]
       },
       "acceptanceCriteria": [
-        "The site loads as a complete, coherent website with clear branding for “PMK TOWING SERVICE”.",
-        "All visible text is in English.",
-        "Layout is responsive and usable on mobile and desktop."
+        "Both uploaded files are included in the repo under a public static path (e.g., frontend/public/assets/...) and can be loaded directly by the browser.",
+        "A new homepage section (e.g., \"Photos\" or \"Gallery\") displays both images in a responsive layout (1 column on mobile, 2 columns on tablet/desktop).",
+        "Each image includes English alt text appropriate to the photo content.",
+        "Images are styled to match the existing site theme (spacing, borders/radius, shadows) and do not break the existing layout."
       ]
     },
     {
-      "id": "REQ-2",
-      "text": "Add prominent contact actions using the provided phone number +917842969695, including a click-to-call link (tel:) and at least one persistent call-to-action button visible on mobile.",
+      "id": "REQ-7",
+      "text": "Add navigation access to the new photos section from the header navigation using the existing smooth-scroll behavior.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-user-add-photos-v2"
         ],
         "quotes": [
-          "Phone no +917842969695"
+          "Add photos on version 2"
         ]
       },
       "acceptanceCriteria": [
-        "The phone number is displayed exactly as “+917842969695”.",
-        "At least one button/link uses a tel:+917842969695 href and works in the browser.",
-        "A call-to-action is visible without scrolling on a typical mobile viewport (e.g., in the hero section or a sticky footer)."
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Include clearly labeled sections appropriate for a towing/recovery service website: Hero, Services, Service Area (Nellore), and Contact.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ],
-        "quotes": [
-          "For car towing recovery service in Nellore"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Navigation or clear page structure allows users to find Services, Service Area (Nellore), and Contact information quickly.",
-        "Services section lists towing/recovery offerings in plain English (no placeholder lorem ipsum).",
-        "Service Area explicitly mentions Nellore."
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "text": "Apply a cohesive visual theme suitable for an emergency roadside/towing business (distinct color palette, typography, spacing, and component styling) and enforce it consistently across all sections (avoid a blue/purple-dominant palette).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The site uses a consistent theme (colors, typography, buttons, section styling) across all sections.",
-        "Primary theme is not dominated by blue/purple."
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "text": "Add generated static image assets to support the website (logo and hero visual), store them under frontend/public/assets/generated, and render them in the UI.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-1"
-        ]
-      },
-      "acceptanceCriteria": [
-        "The generated images exist under frontend/public/assets/generated with the specified filenames.",
-        "The logo appears in the header/hero area and the hero image/illustration appears in the hero section.",
-        "Images are loaded as static assets (not served from the backend)."
+        "Header navigation includes a new link label in English (e.g., \"Photos\") that scrolls smoothly to the new photos section.",
+        "Mobile menu includes the same new navigation item and closes after selection, consistent with existing behavior.",
+        "All pre-existing navigation links (Home, Services, Service Area, Contact) still work as before."
       ]
     }
   ],
   "constraints": [
-    "Do not modify any files under frontend/src/components/ui (compose them instead).",
-    "Do not modify immutable hook/bootstrap files: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx."
+    "Use English for all user-facing text.",
+    "Do not modify files under frontend/src/components/ui or any other immutablePaths listed in SYSTEM_CONTEXT.",
+    "Keep the existing single-page layout and contact phone number (+917842969695) behavior intact."
   ],
   "nonGoals": [
-    "Online payments or booking workflow.",
-    "User accounts or authentication (Internet Identity).",
-    "Real-time chat or messaging.",
-    "Integration with external maps/location services."
+    "Do not add an online booking form.",
+    "Do not add or change backend (Motoko) logic.",
+    "Do not introduce third-party image hosting or external storage."
   ],
   "imageRequirements": {
-    "required": [
-      "Simple bold logo mark with tow-truck silhouette and text “PMK TOWING SERVICE” (pmk-logo.dim_512x512.png)",
-      "Wide hero illustration/photo-style graphic of a car being safely towed on a road with a clean background (pmk-hero.dim_1600x900.png)"
-    ],
+    "required": [],
     "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
   }
 }

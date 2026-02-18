@@ -32,6 +32,7 @@ export function HeaderNav() {
     { label: 'Home', id: 'hero' },
     { label: 'Services', id: 'services' },
     { label: 'Service Area', id: 'service-area' },
+    { label: 'Photos', id: 'photos' },
     { label: 'Contact', id: 'contact' }
   ];
 

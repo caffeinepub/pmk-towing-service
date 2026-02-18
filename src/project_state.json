@@ -1,11 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Build a website for PMK TOWING SERVICE, a car towing/recovery service in Nellore, including contact phone +917842969695.",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Simple bold logo mark with tow-truck silhouette and text “PMK TOWING SERVICE” (pmk-logo.dim_512x512.png)\n- Wide hero illustration/photo-style graphic of a car being safely towed on a road with a clean background (pmk-hero.dim_1600x900.png)",
   "existing_features": [
     {
       "id": "feature-create-a-responsive-marketing-website-for-pmk-towing-service-describing-a-car-towing-and-recovery-service-in-nellore-using-english-for-all-user-facing-text",
@@ -46,12 +45,34 @@
         "REQ-5"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-the-two-user-uploaded-images-photo-1770974079038-png-and-img-20260204-215933-110-jpg-to-the-frontend-as-static-assets-and-render-them-on-the-draft-version-2-homepage-in-a-new-clearly-labeled-section",
+      "title": "Add the two user-uploaded images (Photo_1770974079038.png and IMG_20260204_215933_110.jpg) to the frontend as static assets and render them on the Draft Version 2 homepage in a new, clearly labeled section.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-navigation-access-to-the-new-photos-section-from-the-header-navigation-using-the-existing-smooth-scroll-behavior",
+      "title": "Add navigation access to the new photos section from the header navigation using the existing smooth-scroll behavior.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
     {
       "id": "AR-1",
       "summary": "Create a website for PMK TOWING SERVICE (car towing/recovery in Nellore) including contact phone +917842969695.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add photos to Draft Version 2 of the PMK TOWING SERVICE website (additional imagery beyond existing logo/hero).",
       "reqIds": [],
       "status": "pending"
     }

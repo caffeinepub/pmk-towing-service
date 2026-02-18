@@ -2,6 +2,7 @@ import { HeaderNav } from './components/HeaderNav';
 import { HeroSection } from './components/HeroSection';
 import { ServicesSection } from './components/ServicesSection';
 import { ServiceAreaSection } from './components/ServiceAreaSection';
+import { PhotosSection } from './components/PhotosSection';
 import { ContactSection } from './components/ContactSection';
 import { CallToActionBar } from './components/CallToActionBar';
 import { Footer } from './components/Footer';
@@ -14,6 +15,7 @@ function App() {
         <HeroSection />
         <ServicesSection />
         <ServiceAreaSection />
+        <PhotosSection />
         <ContactSection />
       </main>
       <Footer />
